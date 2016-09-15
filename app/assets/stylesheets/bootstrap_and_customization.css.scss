@@ -1,0 +1,21 @@
+$body-bg: white;
+$font-family-sans-serif:           'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:                    45px;
+$navbar-default-bg: black;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: #27ae60;
+$navbar-default-brand-hover-color:#27ae60;
+$brand-primary: red;
+$jumbotron-bg:white;
+
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
