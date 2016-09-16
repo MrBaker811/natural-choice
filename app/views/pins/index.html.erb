@@ -13,8 +13,11 @@
       <tr>
         <td><%= pin.description %></td>
         <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%= pin.user.email if pin.user %>
+        <% if pin.user == current_user %>
+  <%= link_to 'Edit', edit_pin_path(pin) %>
+  <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +25,8 @@
 
 <br>
 
-<%= link_to 'New Pin', new_pin_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Pin', new_pin_path %>
+<% end %>
+
+
