@@ -1,5 +1,15 @@
 
 
 
-	<h1>Natural Choice</h1>
-	Click here to <%= link_to "Sign Up", "http://www.belmontbarbershop.com/", class: "btn btn-primary" %>
+	<h1>The Natural Choice</h1>
+
+	 <% if user_signed_in? %>
+          # do something
+     <% else %>
+       <p>
+         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  <% end %>  
+	
+
