@@ -11,7 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'paperclip', '~> 4.2'
-gem 'aws-sdk', '< 2.0'
+
 
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
@@ -28,6 +28,7 @@ end
 group :production do
      gem 'pg'
      gem 'rails_12factor'
+     gem 'aws-sdk', '< 2.0'
 end
 
 # Use ActiveModel has_secure_password
