@@ -1,6 +1,12 @@
+
+ <% if user_signed_in? %>
+<%= render 'phrasing/initializer' %>
+<% end %>
+
 <!DOCTYPE html>
 <html>
 <head>
+	
 
   <title>Natural</title>
    <%= stylesheet_link_tag "application", media: "all" %>
