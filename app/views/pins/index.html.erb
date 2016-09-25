@@ -1,5 +1,14 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
+<% if user_signed_in? %>
+   <div class="opener">
+    <%= phrase('edit text here') %>
+    </div>
+
+<div style="margin-top:50px">
+   <%= phrase('I can edit this ') %>
+ </div>
+<% end %>
 
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
@@ -35,7 +44,7 @@
 
 
 
- <%= phrase('speak up') %>
+
 
 
 
