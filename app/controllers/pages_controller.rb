@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def about 
+  	render layout: 'shave'
 	end 
 end
